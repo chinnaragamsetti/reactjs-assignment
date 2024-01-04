@@ -14,7 +14,12 @@ const Listprofile = props => {
         <p className="title">{title}</p>
         <p className="domainurl">{domainUrl}</p>
       </div>
-      <button className="button" type="button" onClick={onDelete}>
+      <button
+        className="button"
+        type="button"
+        onClick={onDelete}
+        data-testid="delete"
+      >
         <img
           src="https://assets.ccbp.in/frontend/react-js/delete-img.png "
           alt="cross"
