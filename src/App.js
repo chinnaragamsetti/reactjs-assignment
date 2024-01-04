@@ -80,7 +80,7 @@ const initialHistoryList = [
 class App extends Component {
   state = {searchInput: '', historyList: initialHistoryList}
 
-  onChagensearch = event => {
+  onChangesearch = event => {
     this.setState({searchInput: event.target.value})
   }
 
@@ -135,7 +135,7 @@ class App extends Component {
             <input
               type="search"
               className="input"
-              onChange={this.onChagensearch}
+              onChange={this.onChangesearch}
             />
           </div>
         </div>
