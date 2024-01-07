@@ -32,3 +32,8 @@
   color: #64748b;
   align-self: flex-end;
 }
+
+.button {
+  background-color: transparent;
+  border: 0px;
+}
