@@ -80,7 +80,7 @@ const initialHistoryList = [
 class App extends Component {
   state = {searchInput: '', historyList: initialHistoryList}
 
-  onChagensearch = event => {
+  onChangesearch = event => {
     this.setState({searchInput: event.target.value})
   }
 
@@ -93,7 +93,7 @@ class App extends Component {
   render() {
     const {searchInput, historyList} = this.state
     const searchresults = historyList.filter(eachlist =>
-      eachlist.title.toLowerCase().includes(searchInput),
+      eachlist.title.toUpperCase().includes(searchInput.toUpperCase()),
     )
 
     let display
@@ -111,7 +111,9 @@ class App extends Component {
       )
     } else {
       display = (
-        <h1 className="emptyhistoryheading">There is no history to view</h1>
+        <div className="resultscontainer">
+          <p className="emptyhistoryheading">There is no history to show</p>
+        </div>
       )
     }
 
@@ -135,7 +137,8 @@ class App extends Component {
             <input
               type="search"
               className="input"
-              onChange={this.onChagensearch}
+              placeholder="Search History"
+              onChange={this.onChangesearch}
             />
           </div>
         </div>
