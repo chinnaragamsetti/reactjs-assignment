@@ -137,7 +137,10 @@ class App extends Component {
             <input
               type="search"
               className="input"
+<<<<<<< HEAD
               placeholder="Search History"
+=======
+>>>>>>> f99089eb7a6d63dcd88b65187251b013cfc9670d
               onChange={this.onChangesearch}
             />
           </div>
